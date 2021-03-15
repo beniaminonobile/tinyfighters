@@ -1,10 +1,66 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Title</title>
-</head>
-<body>
+{% load static i18n %}
+<html>
 
-</body>
+    <head>
+        <meta charset="utf-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+        <!-- TITLE -->
+        <title>Tiny Fighters {% block title %}{% endblock title%}</title>
+
+        <!-- META DESCRIPTION -->
+        <meta name="description" content="{% block meta_description %}{% endblock meta_description %}" />
+
+        <!-- META OPENGRAPH -->
+        {% block open-graph %}
+        <meta property="og:type" content="website" />
+        <meta property="og:title" content='' />
+        <meta property="og:description" content='' />
+        <meta property="og:site_name" content="Tiny Fighters" />
+
+        <meta name="twitter:card" content="summary" />
+        <meta name="twitter:title" content='Tiny Fighters' />
+        <meta name="twitter:description" content='' />
+        <meta name="twitter:site" content="Tiny Fighters" />
+
+        <!-- Theme -->
+        <meta name="theme-color" content="#000000">
+        <meta name="msapplication-navbutton-color" content="#000000">
+        <meta name="apple-mobile-web-app-status-bar-style" content="#000000">
+        {% endblock open-graph %}
+
+        <!-- Favicon -->
+        <link href="{% static 'img/icons/favicon.ico' %}" rel="shortcut icon">
+        <link href="{% static 'img/icons/touch.png' %}" rel="apple-touch-icon-precomposed">
+
+        <!-- STYLESHEETS -->
+        <link rel="stylesheet" href="{% static 'css/main.css' %}">
+
+        {% block css_header %}
+        {% endblock %}
+
+        <!-- JS -->
+        <script type="text/javascript" src="{% static 'js/main.js' %}"></script>
+        {% block js_header %}
+        {% endblock %}
+
+    </head>
+    <body id="homepageBody">
+        {% block main %}
+        {% endblock main %}
+
+    </body>
+
+    {% block js_bottom %}
+    {% endblock %}
+
+    <script type="text/javascript">
+        $(document).ready(function() {
+            {% block js_document_ready %}
+            {% endblock %}
+        });
+    </script>
+
 </html>

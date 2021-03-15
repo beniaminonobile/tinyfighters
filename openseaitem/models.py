@@ -15,6 +15,7 @@ class OpenSeaItem(StatusModel):
 		blank=False,
 		help_text=_('See all available Metadata <a href="https://docs.opensea.io/docs/metadata-standards">here</a>')
 	)
+	image = models.ImageField()
 
 	class Meta:
 		verbose_name = _('Open Sea Item')
