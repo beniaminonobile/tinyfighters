@@ -1,0 +1,8 @@
+# compiled files
+*.pyc
+/.vscode/
+*.sqlite3
+*.sqlite3-journal
+.env
+*.log
+
