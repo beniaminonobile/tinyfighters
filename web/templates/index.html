@@ -51,13 +51,29 @@
         <!-- JS -->
         <script src="{% static 'vendor/jquery/dist/jquery.min.js' %}"></script>
         <script type="text/javascript" src="{% static 'js/main-header.js' %}"></script>
+        <script>
+            var image = new Image();
+            image.onload = function () {
+                    $(".loader-section").css("background-image", "url('" + image.src + "')");
+            }
+            image.src = "{% static 'img/black-knight-fighter.png' %}";
         {% block js_header %}
         {% endblock %}
+        </script>
+
 
     </head>
     <body id="homepageBody">
         
-        <div class="loader-section">
+        <div class="loader-section"
+             style="
+                    background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNkYAAAAAYAAjCB0C8AAAAASUVORK5CYII=);
+                    background-position: center right;
+                    background-size: 30%;
+                    background-repeat: no-repeat;
+                    transition: background-image 3s ease 0s;
+                    -webkit-transition: background-image 3s ease 0s;
+                    ">
             <div class="loader-section-content">
                 <div class="loader-section-title display-1 h1">
                     Tiny Fighters
