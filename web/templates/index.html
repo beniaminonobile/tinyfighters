@@ -36,18 +36,39 @@
         <link href="{% static 'img/icons/touch.png' %}" rel="apple-touch-icon-precomposed">
 
         <!-- STYLESHEETS -->
+        <link rel="stylesheet" href="{% static 'vendor/bootstrap/dist/css/bootstrap.min.css' %}" />
+        <link rel="stylesheet" href="{% static 'vendor/swiper/swiper-bundle.min.css' %}" />
+        <link rel="stylesheet" href="{% static 'vendor/fancybox/dist/jquery.fancybox.min.css' %}" />
+        <link rel="stylesheet" href="{% static 'vendor/slider-revolution/css/settings.css' %}">
+        <link rel="stylesheet" href="{% static 'vendor/slider-revolution/css/layers.css' %}">
+        <link rel="stylesheet" href="{% static 'vendor/slider-revolution/css/navigation.css' %}">
+
         <link rel="stylesheet" href="{% static 'css/main.css' %}">
 
         {% block css_header %}
         {% endblock %}
 
         <!-- JS -->
-        <script type="text/javascript" src="{% static 'js/main.js' %}"></script>
+        <script src="{% static 'vendor/jquery/dist/jquery.min.js' %}"></script>
+        <script type="text/javascript" src="{% static 'js/main-header.js' %}"></script>
         {% block js_header %}
         {% endblock %}
 
     </head>
     <body id="homepageBody">
+        
+        <div class="loader-section">
+            <div class="loader-section-content">
+                <div class="loader-section-title display-1 h1">
+                    Tiny Fighters
+                </div>
+                <div class="loader-section-progress">
+                    <div></div>
+                </div>
+            </div>
+        </div>
+        <div class="loader-section-bg"></div>
+        
         {% block main %}
         {% endblock main %}
 
@@ -55,6 +76,26 @@
 
     {% block js_bottom %}
     {% endblock %}
+
+    <script src="{% static 'vendor/object-fit-images/dist/ofi.min.js' %}"></script>
+    <script src="{% static 'vendor/popper.js/dist/umd/popper.min.js' %}"></script>
+    <script src="{% static 'vendor/scrollreveal/dist/scrollreveal.min.js' %}"></script>
+    <script src="{% static 'vendor/animejs/lib/anime.min.js' %}"></script>
+    <script src="{% static 'vendor/bootstrap/dist/js/bootstrap.min.js' %}"></script>
+    <script src="{% static 'vendor/jarallax/dist/jarallax.min.js' %}"></script>
+    <script src="{% static 'vendor/swiper/swiper-bundle.min.js' %}"></script>
+    <script src="{% static 'vendor/fancybox/dist/jquery.fancybox.min.js' %}"></script>
+    <script src="{% static 'vendor/jquery-countdown/dist/jquery.countdown.min.js' %}"></script>
+    <script src="{% static 'vendor/moment/min/moment.min.js' %}"></script>
+    <script src="{% static 'vendor/moment-timezone/builds/moment-timezone-with-data.min.js' %}"></script>
+    <script src="{% static 'vendor/slider-revolution/js/jquery.themepunch.tools.min.js' %}"></script>
+    <script src="{% static 'vendor/slider-revolution/js/jquery.themepunch.revolution.min.js' %}"></script>
+    <script src="{% static 'vendor/imagesloaded/imagesloaded.pkgd.min.js' %}"></script>
+    <script src="{% static 'vendor/isotope-layout/dist/isotope.pkgd.min.js' %}"></script>
+    <script src="{% static 'vendor/ion-rangeslider/js/ion.rangeSlider.min.js' %}"></script>
+    <script src="{% static 'vendor/bootstrap-touchspin/dist/jquery.bootstrap-touchspin.min.js' %}"></script>
+    <script src="{% static 'vendor/bootstrap-validator/dist/validator.min.js' %}"></script>
+    <script type="text/javascript" src="{% static 'js/main-header.js' %}"></script>
 
     <script type="text/javascript">
         $(document).ready(function() {
