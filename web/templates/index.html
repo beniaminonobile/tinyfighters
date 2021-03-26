@@ -36,6 +36,8 @@
         <link href="{% static 'img/icons/touch.png' %}" rel="apple-touch-icon-precomposed">
 
         <!-- STYLESHEETS -->
+        <link rel="preconnect" href="https://fonts.gstatic.com">
+        <link href="https://fonts.googleapis.com/css2?family=Chango&family=Roboto+Slab&display=swap" rel="stylesheet">
         <link rel="stylesheet" href="{% static 'vendor/bootstrap/dist/css/bootstrap.min.css' %}" />
         <link rel="stylesheet" href="{% static 'vendor/swiper/swiper-bundle.min.css' %}" />
         <link rel="stylesheet" href="{% static 'vendor/fancybox/dist/jquery.fancybox.min.css' %}" />
@@ -56,7 +58,7 @@
             image.onload = function () {
                     $(".loader-section").css("background-image", "url('" + image.src + "')");
             }
-            image.src = "{% static 'img/black-knight-fighter.png' %}";
+            image.src = "{% static 'img/knight_blackblurred.png' %}";
         {% block js_header %}
         {% endblock %}
         </script>
@@ -65,17 +67,9 @@
     </head>
     <body id="homepageBody">
         
-        <div class="loader-section"
-             style="
-                    background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNkYAAAAAYAAjCB0C8AAAAASUVORK5CYII=);
-                    background-position: center right;
-                    background-size: 30%;
-                    background-repeat: no-repeat;
-                    transition: background-image 3s ease 0s;
-                    -webkit-transition: background-image 3s ease 0s;
-                    ">
+        <div class="loader-section">
             <div class="loader-section-content">
-                <div class="loader-section-title display-1 h1">
+                <div class="loader-section-title display-1 h1 text-center">
                     Tiny Fighters
                 </div>
                 <div class="loader-section-progress">
@@ -84,7 +78,146 @@
             </div>
         </div>
         <div class="loader-section-bg"></div>
-        
+
+        <section class="tf-section text-center h-100" data-sr="main" data-sr-interval="140" data-sr-duration="1200" data-sr-distance="20">
+            <div id="particles-js"></div>
+            <div class="container">
+                <h2 class="display-2 mb-60" data-sr-item="main" style="visibility: visible;">What is Tiny Fighters?</h2>
+                <div class="row vgap">
+                    <div class="col-12 col-md-5" data-sr-item="main" style="visibility: visible;">
+                        <img src="{% static 'img/archer.png' %}" title="Tiny Fighters" style="max-height: 30vh;">
+                    </div>
+                    <div class="col-12 col-md-7 display-4 h4 d-flex align-items-center" data-sr-item="main" style="visibility: visible;">
+                        <h4>
+                            Tiny Fighters is a game centered around breedable, collectible, and oh-so-adorable creatures we call
+                            <br/>Tiny Fighters! Each fighter is one-of-a-kind and 100% owned by you;
+                            <br>it cannot be replicated, taken away, or destroyed.
+                        </h4>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="tf-section bg-light text-center h-100" data-sr="feature" data-sr-interval="140" data-sr-duration="1200" data-sr-distance="20">
+            <div class="container">
+                <h2 class="display-2 mb-60" data-sr-item="main" style="visibility: visible;">How can I buy Fighters?</h2>
+                <div class="row">
+                    <div class="col-12 display-4 h4 d-flex align-items-center text-center" data-sr-item="main" style="visibility: visible;">
+                        <h4 class="w-100">
+                            Tiny Fighters will be at first available at Opensea.io.
+                        </h4>
+                    </div>
+                    <div id="countdown-container" class="countdown countdown-container container">
+                        <div class="row">
+                            <h4 class=" w-100 text-center">
+                                NEXT AUCTION IN:
+                            </h4>
+                        </div>
+                        <div class="clock row">
+                            <div class="clock-item clock-days countdown-time-value col-3 col-sm-3">
+                                <div class="wrap p0 p-xl-3">
+                                    <div class="inner">
+                                        <div id="canvas-days" class="clock-canvas"></div>
+
+                                        <div class="text">
+                                            <p class="val mb-0 mt-4 mt-md-0">0</p>
+                                            <p class="type-days type-time">DAYS</p>
+                                        </div><!-- /.text -->
+                                    </div><!-- /.inner -->
+                                </div><!-- /.wrap -->
+                            </div><!-- /.clock-item -->
+
+                            <div class="clock-item clock-hours countdown-time-value col-3 col-sm-3">
+                                <div class="wrap p0 p-xl-3">
+                                    <div class="inner">
+                                        <div id="canvas-hours" class="clock-canvas"></div>
+
+                                        <div class="text">
+                                            <p class="val mb-0 mt-4 mt-md-0">0</p>
+                                            <p class="type-hours type-time">HOURS</p>
+                                        </div><!-- /.text -->
+                                    </div><!-- /.inner -->
+                                </div><!-- /.wrap -->
+                            </div><!-- /.clock-item -->
+
+                            <div class="clock-item clock-minutes countdown-time-value col-3 col-sm-3">
+                                <div class="wrap p0 p-xl-3">
+                                    <div class="inner">
+                                        <div id="canvas-minutes" class="clock-canvas"></div>
+
+                                        <div class="text">
+                                            <p class="val mb-0 mt-4 mt-md-0">0</p>
+                                            <p class="type-minutes type-time">MINUTES</p>
+                                        </div><!-- /.text -->
+                                    </div><!-- /.inner -->
+                                </div><!-- /.wrap -->
+                            </div><!-- /.clock-item -->
+
+                            <div class="clock-item clock-seconds countdown-time-value col-3 col-sm-3">
+                                <div class="wrap p0 p-xl-3">
+                                    <div class="inner">
+                                        <div id="canvas-seconds" class="clock-canvas"></div>
+
+                                        <div class="text">
+                                            <p class="val mb-0 mt-4 mt-md-0">0</p>
+                                            <p class="type-seconds type-time">SECONDS</p>
+                                        </div><!-- /.text -->
+                                    </div><!-- /.inner -->
+                                </div><!-- /.wrap -->
+                            </div><!-- /.clock-item -->
+                        </div><!-- /.clock -->
+                    </div><!-- /.countdown-wrapper -->
+                </div>
+            </div>
+        </section>
+
+        <section class="tf-section text-center h-100" data-sr="main" data-sr-interval="140" data-sr-duration="1200" data-sr-distance="20">
+            <div class="container">
+                <h2 class="display-2 mb-60" data-sr-item="main" style="visibility: visible;">Be the first to own them!</h2>
+                <div class="row vgap">
+                    <div class="col-12 col-md-5" data-sr-item="main" style="visibility: visible;">
+                        <img src="{% static 'img/red-knight.png' %}" title="Tiny Fighters" style="max-height: 25vh;">
+                    </div>
+                    <div class="col-12 col-md-7 display-4 h4 d-flex align-items-center" data-sr-item="main" style="visibility: visible;">
+                        <h4>
+                            First 5 characters will be available in limited edition with increased stats!
+                            <br/>Only 5 of each will be mined. They will available in five different auctions, each auction with higher starting price.
+                            <br/><br/>See the dates below!
+                        </h4>
+                    </div>
+                </div>
+                <div class="row mt-5 mb-5">
+                    <div class="col-12 d-flex flex-wrap justify-content-around">
+                        {% now "Y-m-d" as today_date %}
+                        {% for auction in auction_list %}
+                            <time datetime="{{auction|date:'Y-m-d'}}"
+                                  class="icon {% if today_date > auction|date:'Y-m-d' %}expired{% endif %} mt-4">
+                              <em>{{auction|date:"l"}}</em>
+                              <strong>{{auction|date:"F"}}</strong>
+                              <span>{{auction|date:"d"}}</span>
+                            </time>
+                        {% endfor %}
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="tf-section bg-light text-center h-100" data-sr="feature" data-sr-interval="140" data-sr-duration="1200" data-sr-distance="20">
+            <div class="container">
+                <h2 class="display-2 mb-60" data-sr-item="feature" style="visibility: visible;">About Us</h2>
+                <div class="row vgap justify-content-center">
+                    <div class="col-12 col-md-7" data-sr-item="feature" style="visibility: visible;">
+                        <h4>
+                           Help and Kickstart us!
+                        </h4>
+                    </div>
+                    <div class="col-12 col-md-5" data-sr-item="main" style="visibility: visible;">
+                        <img src="{% static 'img/barbarian-reverse.png' %}" title="Barbarian" style="max-height: 30vh;">
+                    </div>
+                </div>
+            </div>
+        </section>
+
         {% block main %}
         {% endblock main %}
 
@@ -111,10 +244,16 @@
     <script src="{% static 'vendor/ion-rangeslider/js/ion.rangeSlider.min.js' %}"></script>
     <script src="{% static 'vendor/bootstrap-touchspin/dist/jquery.bootstrap-touchspin.min.js' %}"></script>
     <script src="{% static 'vendor/bootstrap-validator/dist/validator.min.js' %}"></script>
+
+    <script src="http://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+
+    <script type="text/javascript" src="{% static 'js/countdown.js' %}"></script>
     <script type="text/javascript" src="{% static 'js/main-header.js' %}"></script>
+    <script type="text/javascript" src="{% static 'js/init-particles.js' %}"></script>
 
     <script type="text/javascript">
         $(document).ready(function() {
+            initCountDown('countdown-container', '{{next_auction_date}}')
             {% block js_document_ready %}
             {% endblock %}
         });
