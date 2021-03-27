@@ -47,6 +47,13 @@
 
         <link rel="stylesheet" href="{% static 'css/main.css' %}">
 
+        <!--<style>-->
+            <!--.main-section {-->
+                <!--background-image: url('{% static 'img/main-background.png' %}');-->
+                <!--height: 100vh!important;-->
+            <!--}-->
+        <!--</style>-->
+
         {% block css_header %}
         {% endblock %}
 
@@ -79,19 +86,31 @@
         </div>
         <div class="loader-section-bg"></div>
 
+        <section class="main-section text-center" style="background-color:black;">
+            <div class="display-1 h1 ml-auto mr-auto w-100 main-section-title d-none d-md-block" style="position: absolute; padding-top:25%">
+                <div>
+                    Tiny Fighters
+                </div>
+            </div>
+            <img src="{% static 'img/mobile-background.png' %}" title="Tiny Fighters"
+                 class="ml-auto mr-auto d-block d-md-none" style="max-height:100vh; max-width:100%;">
+            <img src="{% static 'img/main-background1.png' %}" title="Tiny Fighters"
+                 class="ml-auto mr-auto d-none d-md-block" style="max-height:100vh; max-width:100%;">
+        </section>
+
         <section class="tf-section text-center h-100" data-sr="main" data-sr-interval="140" data-sr-duration="1200" data-sr-distance="20">
             <div id="particles-js"></div>
             <div class="container">
-                <h2 class="display-2 mb-60" data-sr-item="main" style="visibility: visible;">What is Tiny Fighters?</h2>
+                <h2 class="display-2 mb-60" data-sr-item="main" style="visibility: visible;">What is "Tiny Fighters"?</h2>
                 <div class="row vgap">
                     <div class="col-12 col-md-5" data-sr-item="main" style="visibility: visible;">
                         <img src="{% static 'img/archer.png' %}" title="Tiny Fighters" style="max-height: 30vh;">
                     </div>
                     <div class="col-12 col-md-7 display-4 h4 d-flex align-items-center" data-sr-item="main" style="visibility: visible;">
                         <h4>
-                            Tiny Fighters is a game centered around breedable, collectible, and oh-so-adorable creatures we call
-                            <br/>Tiny Fighters! Each fighter is one-of-a-kind and 100% owned by you;
-                            <br>it cannot be replicated, taken away, or destroyed.
+                            Tiny Fighters are tiny, strong, collectible and awesome creatures.
+                            <br>Each fighter is one-of-a-kind and 100% owned by you.
+                            <br>It cannot be replicated, taken away, or destroyed.
                         </h4>
                     </div>
                 </div>
@@ -105,6 +124,11 @@
                     <div class="col-12 display-4 h4 d-flex align-items-center text-center" data-sr-item="main" style="visibility: visible;">
                         <h4 class="w-100">
                             Tiny Fighters will be at first available at Opensea.io.
+                            <br/>Check here if any new fighter is on sale:
+                            <br/>
+                            <a href="https://opensea.io/collection/tiny-fighters" title="tinyfighters opensea" style="text-decoration:underline;">
+                                opensea.io/collection/tiny-fighters
+                            </a>
                         </h4>
                     </div>
                     <div id="countdown-container" class="countdown countdown-container container">
@@ -208,7 +232,11 @@
                 <div class="row vgap justify-content-center">
                     <div class="col-12 col-md-7" data-sr-item="feature" style="visibility: visible;">
                         <h4>
-                           Help and Kickstart us!
+                            Help and Kickstart us!<br/>
+                            Our team is working on a brand new collectible card game<br/>
+                            Blockchain technology, which is notoriously slow and inefficient at processing transactions, will only be used to keep track of the cards and who owns them. The actual game will be played “off-chain.”
+                            <br>The more funding we receive the more of these creatures will be revealed to the world.
+                            <br>The starting goal to keep developing the game is 5000$
                         </h4>
                     </div>
                     <div class="col-12 col-md-5" data-sr-item="main" style="visibility: visible;">

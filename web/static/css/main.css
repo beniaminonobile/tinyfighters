@@ -12488,6 +12488,9 @@ body.compensate-for-scrollbar {
         background-position: center left;
         background-size: 30%;
     }
+    .display-1.h1.main-section-title {
+      font-size: 5.5rem;
+    }
 }
 
 time.icon

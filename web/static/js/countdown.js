@@ -1,6 +1,5 @@
 
 function initCountDown(ElementId, deadline) {
-    debugger
     // Set the date we're counting down to
     var countDownDate = new Date(deadline).getTime();
 
