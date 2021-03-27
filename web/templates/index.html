@@ -8,21 +8,23 @@
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
         <!-- TITLE -->
-        <title>Tiny Fighters {% block title %}{% endblock title%}</title>
+        <title>Tiny Fighters | Collectible Card Game</title>
 
         <!-- META DESCRIPTION -->
-        <meta name="description" content="{% block meta_description %}{% endblock meta_description %}" />
+        <meta name="description" content="Tiny Fighters are tiny, strong, collectible and awesome creatures for a brand new collectible card game" />
 
         <!-- META OPENGRAPH -->
         {% block open-graph %}
         <meta property="og:type" content="website" />
-        <meta property="og:title" content='' />
-        <meta property="og:description" content='' />
+        <meta property="og:title" content='Tiny Fighters' />
+        <meta property="og:description" content='Tiny Fighters are tiny, strong, collectible and awesome creatures for a brand new collectible card game' />
         <meta property="og:site_name" content="Tiny Fighters" />
+        <meta property="og:url" content="https://www.tinyfighters.fun/" />
+        <meta property="og:image" content="https://www.tinyfighters.fun/static/img/main-background1.png" />
 
         <meta name="twitter:card" content="summary" />
         <meta name="twitter:title" content='Tiny Fighters' />
-        <meta name="twitter:description" content='' />
+        <meta name="twitter:description" content='Tiny Fighters are tiny, strong, collectible and awesome creatures for a brand new collectible card game' />
         <meta name="twitter:site" content="Tiny Fighters" />
 
         <!-- Theme -->
@@ -30,6 +32,16 @@
         <meta name="msapplication-navbutton-color" content="#000000">
         <meta name="apple-mobile-web-app-status-bar-style" content="#000000">
         {% endblock open-graph %}
+
+        <!-- Global site tag (gtag.js) - Google Analytics -->
+        <script async src="https://www.googletagmanager.com/gtag/js?id=G-85L7M5TXE5"></script>
+        <script>
+          window.dataLayer = window.dataLayer || [];
+          function gtag(){dataLayer.push(arguments);}
+          gtag('js', new Date());
+
+          gtag('config', 'G-85L7M5TXE5');
+        </script>
 
         <!-- Favicon -->
         <link href="{% static 'img/icons/favicon.ico' %}" rel="shortcut icon">
@@ -69,7 +81,6 @@
         {% block js_header %}
         {% endblock %}
         </script>
-
 
     </head>
     <body id="homepageBody">
