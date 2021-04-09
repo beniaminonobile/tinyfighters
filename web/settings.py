@@ -226,7 +226,7 @@ REST_FRAMEWORK = {
     'PAGE_SIZE': 50,
 }
 
-NEXT_AUCTION_DATE = "2021-04-09T12:00:00Z"
+NEXT_AUCTION_DATE = "2021-04-09T18:00:00Z"
 
 import datetime
 
@@ -234,6 +234,6 @@ AUCTION_DATE_LIST = [
     datetime.datetime.strptime("2021-04-03T12:00:00Z", "%Y-%m-%dT%H:%M:%SZ"),
     datetime.datetime.strptime("2021-04-06T12:00:00Z", "%Y-%m-%dT%H:%M:%SZ"),
     datetime.datetime.strptime("2021-04-09T12:00:00Z", "%Y-%m-%dT%H:%M:%SZ"),
-    datetime.datetime.strptime("2021-04-12T12:00:00Z", "%Y-%m-%dT%H:%M:%SZ"),
-    datetime.datetime.strptime("2021-04-15T12:00:00Z", "%Y-%m-%dT%H:%M:%SZ"),
+    datetime.datetime.strptime("2021-04-14T10:00:00Z", "%Y-%m-%dT%H:%M:%SZ"),
+    datetime.datetime.strptime("2021-04-19T10:00:00Z", "%Y-%m-%dT%H:%M:%SZ"),
 ]
